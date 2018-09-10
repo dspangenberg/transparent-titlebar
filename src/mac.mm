@@ -44,6 +44,7 @@ void setup(const Nan::FunctionCallbackInfo<v8::Value>& info) {
   }
   auto win = windowFromBuffer(info[0]);
   win.titlebarAppearsTransparent = true;
+  win.titleVisibility = NSWindowTitleHidden;
   win.styleMask |= NSWindowStyleMaskFullSizeContentView;
 }
 
